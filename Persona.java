@@ -1,13 +1,11 @@
 package POO;
 public class Persona {
 	 //Atributos
-	 public String nombre;
-	 public int edad;
-	 public String sexo;
-	 //Metodos
-	   //Metodos de acceso
-	   public Persona() {
-		   
+	  private String nombre;
+	  private int edad;
+	  private String sexo;
+	   //Metodos
+	   public Persona() { //Constructor		   
 	   }
 	   public String correr() {
 		   return "Estoy corriendo";
@@ -15,16 +13,23 @@ public class Persona {
 	   public String comer() {
 		   return "Estoy comiendo";
 	   } 
-	 //Metodos de la clase o comunes
-		public static void main(String[] args) {
-			       //objeto   //instancia	
-			Persona persona = new Persona();
-
-			String respuesta =  persona.correr();
-			System.out.println(respuesta);
-			persona.edad = 19;
-			System.out.println(persona.edad);
-								
+	   //Metodos acceso
+	    public String getNombre() {
+			return this.nombre;
 		}
-	   
+		public void setNombre(String nombre) {
+			this.nombre = nombre;
+		}
+		public int getEdad() {
+			return this.edad;
+		}
+		public void setEdad(int edad) {
+			this.edad = edad;
+		}
+		public String getSexo() {
+			return this.sexo;
+		}
+		public void setSexo(String sexo) {
+			this.sexo = sexo;
+		}  	   
 }
